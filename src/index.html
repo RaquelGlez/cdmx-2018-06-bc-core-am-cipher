@@ -6,6 +6,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div>
+      <h1>Cifra tu mensaje</h1>
+    </div>
+    <!--Solicitamos el mensaje al usuario-->
+    <form id=mensaje>
+      <label for="m1">Mensaje</label>
+          <input name="Mensaje" id="myMessage" type="text">
+          <input name="enviar" type="button" placeholder="Tu mensaje" value="Cifrar" onclick="cifrarMensaje()" required>
+      <!--<input type="submit"  name="Mensaje" onclick="mensaje()" required>-->
+    </form>
+    <br>
+    <!--Solicitamos el offset al usuario-->
+    <form>
+      <label for="os">Offset</label>
+          <input id="offSet" type="number" min ="1" >
+        <!--  <input name="enviar" type="submit" id="offset" value="Enviar" required> -->
+    </form>
+<br>
+    <!--Entregar el mensaje cifrado-->
+    <form id=mCifrado>
+      <label for="m1">Mensaje Cifrado</label>
+          <input name="Mensaje" id="myMessage2" type="text">
+          <input name="enviar" type="button" placeholder="Mensaje cifrado" value="Descifrar" onclick="descifrarMensaje()" required>
+      <!--<input type="submit"  name="Mensaje" onclick="mensaje()" required>-->
+    </form>
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
