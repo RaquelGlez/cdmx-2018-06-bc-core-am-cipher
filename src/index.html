@@ -6,31 +6,63 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <h1>Cifra tu mensaje</h1>
-    </div>
-    <!--Solicitamos el mensaje al usuario-->
-    <form id=mensaje>
-      <label for="m1">Mensaje</label>
-          <input name="Mensaje" id="myMessage" type="text">
-          <input name="enviar" type="button" placeholder="Tu mensaje" value="Cifrar" onclick="cifrarMensaje()" required>
-      <!--<input type="submit"  name="Mensaje" onclick="mensaje()" required>-->
-    </form>
-    <br>
-    <!--Solicitamos el offset al usuario-->
-   <form>
-      <label for="os">Offset</label>
-          <input id="offSet" type="number" min ="1" >
-        <!--  <input name="enviar" type="submit" id="offset" value="Enviar" required> -->
-    </form>
-<br>
-    <!--Entregar el mensaje cifrado-->
-    <form id=mCifrado>
-      <label for="m1">Mensaje Cifrado</label>
-          <input name="Mensaje" id="myMessage2" type="text">
-          <input name="enviar" type="button" placeholder="Mensaje cifrado" value="Descifrar" onclick="descifrarMensaje()" required>
-      <!--<input type="submit"  name="Mensaje" onclick="mensaje()" required>-->
-    </form>
+    <div id="background"></div>
+    <section class="C1">
+      <div class="row1">
+        <h1 id="Titulo">Bienvenido a <br> <em>Cifra tu mensaje</em></h1>
+        <p id="Instrucciones1"><strong>Instrucciones</strong><br>
+          <strong>* Para cifrar</strong><br>
+          1. Escribe el texto en el apartado "Mensaje" <br>
+          2. Elige la clave numérica para cifrar tu texto <br>
+          3. Da click en el botón de cifrar
+        </p>
+        <p id="Instrucciones2"><br>
+          <strong>* Para descifrar</strong><br>
+          1. Escribe el texto en el apartado "Mensaje Cifrado" <br>
+          2. Elige la clave numérica para descifrar tu texto <br>
+          3. Da click en el botón de descifrar
+        </p>
+
+      </div>
+    </section>
+
+    <section class="C2">
+      <div class="row2">
+        <div class="container2">
+          <div class="col-1">
+            <!--Input para que el usuario escriba su texto a cifrar, o bien reciba un texto descifrado-->
+            <form id=mensaje>
+              <label for="m1">Mensaje</label><br>
+                <!--<input name="Mensaje" id="myMessage" type="text">-->
+                <textarea name="Mensaje" id="myMessage" rows="10" cols="20"></textarea>
+          </form>
+          </div>
+          <div class="col-2">
+            <!--Input para que el usuario indique el offset para cifrar el mensaje-->
+              <label for="os">Clave Numérica</label><br>
+                  <input id="offSet" type="number" min ="1" >
+                  <br>
+                  <br>
+            <!--Botón para que el usuario cifre un mensaje-->
+              <input name="enviar" type="button" placeholder="Tu mensaje" value="Cifrar"  onclick="cifrarMensaje()" required>
+              <br>
+              <br>
+            <!--Botón para que el usuario descifre un mensaje-->
+              <input name="enviar" type="button" placeholder="Mensaje cifrado" value="Descifrar" onclick="descifrarMensaje()" required>
+          </div>
+          <div class="col-3">
+            <!--Entregar el mensaje cifrado-->
+            <form id=mCifrado>
+              <label for="m1">Mensaje Cifrado</label><br>
+                  <!--<input name="Mensaje" id="myMessage2" type="text">-->
+                  <textarea name="Mensaje" id="myMessage2" rows="10" cols="20"></textarea>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

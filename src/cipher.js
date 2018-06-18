@@ -2,7 +2,6 @@ window.cipher = {
 
 
   //Para cifrar el mensaje
-//  key:
   encode:(string,key)=> {
 
   //Variables para llevar a cabo el cifrado
